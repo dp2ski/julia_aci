@@ -1,0 +1,26 @@
+# julia image for with additional packages
+
+BootStrap: docker
+From: julia:latest
+
+%runscript
+    exec julia
+
+%environment
+
+%post
+
+    apt-get install -y fontconfig
+    apt-get install -y cairo
+
+    julia -e 'using Pkg; Pkg.add("Mimi")'
+    julia -e 'using Pkg; Pkg.build("Mimi")'
+    
+    #------------------------------------------------------------------------------
+    # Create local binding points for our ICS-ACI
+    #------------------------------------------------------------------------------
+    mkdir -p /storage/home
+    mkdir -p /storage/work
+    mkdir -p /gpfs/scratch
+    mkdir -p /gpfs/group
+    mkdir -p /var/spool/torque

@@ -13,7 +13,7 @@ From: julia:latest
     apt-get install -y build-essential
     apt-get install -y fontconfig
     apt-get install -y libcairo2-dev
-    apt-get install -y gettext-base libcroco3 libglib2.0-0 libglib2.0-data libgpm2 libicu57 libncurses5 libxml2 sgml-base shared-mime-info xdg-user-dirs xml-core gettext fontconfig-config fonts-dejavu-core libbsd0 libexpat1 libfontconfig1 libfreetype6 libpixman-1-0 libpng16-16 libx11-6 libx11-data libxau6 libxcb-render0 libxcb-shm0 libxcb1 libxdmcp6 libxext6 libxrender1 ucf
+    apt-get install -y gettext-base libcroco3 libglib2.0-0 libglib2.0-data libgpm2 libicu57 libncurses5 libxml2 sgml-base shared-mime-info xdg-user-dirs xml-core gettext fontconfig-config fonts-dejavu-core libbsd0 libexpat1 libfontconfig1 libfreetype6 libpixman-1-0 libpng16-16 libx11-6 libx11-data libxau6 libxcb-render0 libxcb-shm0 libxcb1 libxdmcp6 libxext6 libxrender1 ucf libdatrie1 libgraphite2-3 libharfbuzz0b libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpangox-1.0-0 libpangoxft-1.0-0 libthai-data libthai0 libxft2 libpango1.0-0 
 
     /usr/local/julia/bin/julia -e 'using Pkg; Pkg.add("Mimi")'
     /usr/local/julia/bin/julia -e 'using Pkg; Pkg.build("Mimi")'

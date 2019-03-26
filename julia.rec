@@ -9,9 +9,9 @@ From: julia:latest
 %environment
 
 %post
-    apt-get update
+    apt-get update && apt-get install -y --no-install-recommends apt-utils
     apt-get install -y fontconfig
-    apt-get install libcairo2-dev
+    apt-get install -y libcairo2-dev
 
     julia -e 'using Pkg; Pkg.add("Mimi")'
     julia -e 'using Pkg; Pkg.build("Mimi")'

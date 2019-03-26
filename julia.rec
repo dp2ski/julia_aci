@@ -11,7 +11,7 @@ From: julia:latest
 %post
     apt-get update
     apt-get install -y fontconfig
-    apt-get install -y cairo
+    apt-get install libcairo2-dev
 
     julia -e 'using Pkg; Pkg.add("Mimi")'
     julia -e 'using Pkg; Pkg.build("Mimi")'

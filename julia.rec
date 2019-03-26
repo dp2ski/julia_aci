@@ -4,17 +4,19 @@ BootStrap: docker
 From: julia:latest
 
 %runscript
-    exec julia
+    exec /usr/local/julia/bin/julia "$@"
 
 %environment
 
 %post
     apt-get update && apt-get install -y --no-install-recommends apt-utils
+    apt-get install -y build-essential
     apt-get install -y fontconfig
     apt-get install -y libcairo2-dev
+    apt-get install -y gettext-base libcroco3 libglib2.0-0 libglib2.0-data libgpm2 libicu57 libncurses5 libxml2 sgml-base shared-mime-info xdg-user-dirs xml-core gettext fontconfig-config fonts-dejavu-core libbsd0 libexpat1 libfontconfig1 libfreetype6 libpixman-1-0 libpng16-16 libx11-6 libx11-data libxau6 libxcb-render0 libxcb-shm0 libxcb1 libxdmcp6 libxext6 libxrender1 ucf
 
-    julia -e 'using Pkg; Pkg.add("Mimi")'
-    julia -e 'using Pkg; Pkg.build("Mimi")'
+    /usr/local/julia/bin/julia -e 'using Pkg; Pkg.add("Mimi")'
+    /usr/local/julia/bin/julia -e 'using Pkg; Pkg.build("Mimi")'
     
     #------------------------------------------------------------------------------
     # Create local binding points for our ICS-ACI

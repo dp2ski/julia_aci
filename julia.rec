@@ -21,6 +21,9 @@ From: julia:1.1.0
                        libxss1 libnss3-dev gcc-multilib g++-multilib curl \
                        gperf bison python-dbusmock
 
+    apt-get install -y python3.5-dev        #required for PyCall
+    apt-get install -y unzip                #required for electron
+
     /usr/local/julia/bin/julia -e 'using Pkg; Pkg.add("Mimi")'
     /usr/local/julia/bin/julia -e 'using Pkg; Pkg.build("Mimi")'
     /usr/local/julia/bin/julia -e 'using Mimi'

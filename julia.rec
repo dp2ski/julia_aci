@@ -12,7 +12,7 @@ From: julia:1.1.0
     apt-get update && apt-get install -y --no-install-recommends apt-utils
     apt-get install -y build-essential
     apt-get install -y fontconfig
-    apt-get install -y libcairo2-dev
+        
     apt-get install -y gettext-base libcroco3 libglib2.0-0 libglib2.0-data libgpm2 libicu57 libncurses5 libxml2 sgml-base shared-mime-info xdg-user-dirs xml-core gettext fontconfig-config fonts-dejavu-core libbsd0 libexpat1 libfontconfig1 libfreetype6 libpixman-1-0 libpng16-16 libx11-6 libx11-data libxau6 libxcb-render0 libxcb-shm0 libxcb1 libxdmcp6 libxext6 libxrender1 ucf libdatrie1 libgraphite2-3 libharfbuzz0b libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpangox-1.0-0 libpangoxft-1.0-0 libthai-data libthai0 libxft2 libpango1.0-0 libgdk-pixbuf2.0-0 libgdk-pixbuf2.0-common libjbig0 libjpeg62-turbo librsvg2-common libtiff5 librsvg2-bin librsvg2-2
 
     apt-get install -y clang libdbus-1-dev libgtk-3-dev \
@@ -23,6 +23,7 @@ From: julia:1.1.0
 
     apt-get install -y python3.5-dev        #required for PyCall
     apt-get install -y unzip                #required for electron
+    apt-get install -y libgtk2.0-0          
 
     /usr/local/julia/bin/julia -e 'using Pkg; Pkg.add("Mimi")'
     /usr/local/julia/bin/julia -e 'using Pkg; Pkg.build("Mimi")'
